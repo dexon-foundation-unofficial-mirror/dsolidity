@@ -66,6 +66,7 @@ enum class Instruction: uint8_t
 	SAR,				///< bitwise SAR operation
 
 	KECCAK256 = 0x20,		///< compute KECCAK-256 hash
+	RAND = 0x2f,			///< load a random value
 
 	ADDRESS = 0x30,		///< get address of currently executing account
 	BALANCE,			///< get balance of the given account
