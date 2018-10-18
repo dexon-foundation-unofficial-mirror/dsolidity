@@ -201,7 +201,7 @@ void ViewPureChecker::endVisit(Identifier const& _identifier)
 				mutability = StateMutability::View;
 			break;
 		case Type::Category::Integer:
-			solAssert(_identifier.name() == "now", "");
+			solAssert(_identifier.name() == "now" || _identifier.name() == "rand", "");
 			mutability = StateMutability::View;
 			break;
 		default:
