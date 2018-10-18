@@ -1321,6 +1321,8 @@ bool ExpressionCompiler::visit(MemberAccess const& _memberAccess)
 			m_context << Instruction::COINBASE;
 		else if (member == "timestamp")
 			m_context << Instruction::TIMESTAMP;
+		else if (member == "rand")
+			m_context << Instruction::RAND;
 		else if (member == "difficulty")
 			m_context << Instruction::DIFFICULTY;
 		else if (member == "number")
@@ -1548,7 +1550,11 @@ void ExpressionCompiler::endVisit(Identifier const& _identifier)
 			break;
 		case Type::Category::Integer:
 			// "now"
-			m_context << Instruction::TIMESTAMP;
+			if (_identifier.name() == "now") {
+				m_context << Instruction::TIMESTAMP;
+			} else if (_identifier.name() == "rand") {
+				m_context << Instruction::RAND;
+			}
 			break;
 		default:
 			break;

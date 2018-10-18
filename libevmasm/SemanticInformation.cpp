@@ -239,6 +239,7 @@ bool SemanticInformation::invalidInPureFunctions(Instruction _instruction)
 	case Instruction::BLOCKHASH:
 	case Instruction::COINBASE:
 	case Instruction::TIMESTAMP:
+	case Instruction::RAND:
 	case Instruction::NUMBER:
 	case Instruction::DIFFICULTY:
 	case Instruction::GASLIMIT:
