@@ -37,7 +37,7 @@ branches:
 
 env:
     global:
-        - ENCRYPTION_LABEL="6d4541b72666"
+        - ENCRYPTION_LABEL="671c80db"
         - SOLC_BUILD_TYPE=RelWithDebInfo
         - SOLC_EMSCRIPTEN=Off
         - SOLC_INSTALL_DEPS_TRAVIS=On
@@ -230,7 +230,7 @@ deploy:
     # This runs for each tag that is created and adds the corresponding files.
     - provider: releases
       api_key:
-          secure: PWH37xVBCF0XiSjl+eH7XIdkrfxZXjzvqF4PiBOnD3VnFz+odrdnIwBmCeBYTHTWF8efpp8fmzWJk2UVq1JcpyZiC+SVxO8dx91W2ia1a+wKrEQuDgkUrZBkl5IQNCv0QS81DDQhliyZEaYh8wHO/7RReyMpGpw2U2u85WkFiZ+LdlHEZPfzUeh9lxQ9n8qwFL8Rja+Q05d4cQ8zaVEtofJJT4T6DUWhc3TzuxDYxOmjwg37rC9CkGSLn6VadSh8b3j5R0SZupFsAEvBL/imBLP9r9ewoo7o4p6By3jwiIgH9yNg7LM618xbffcNaYF/KtLBi9uPHfqF7hRD4PlECz+D0PR78nQItOX5HKm1QMg5kCnghRVCA0IVjpV5fiYQnMLM7dCRv34I5b3zLpa69wQ/GLYB2FViqNUfvPeiZTEeIJ2OmATlFx8AH2JoqpY1XJknWb35+vMfa8LSiJJW++SLWeV+ncC92hrvyZ1cy3trepRRZIfyYepxHifnfdWMkddQUJk5b2WS5Fy/TJLZNPeombnpvRhUC38dsYItarKeXTc6k4oADCEDZ2rgGIcEiqRxXV11Y5xHJekLDWzUs+YJNcCuL4pnAP//LOnbnH2w9rLpwhQYSl0anCd097NivAXQJXO2JI/byIYz1kiCVQWnW6EM8+72mLOklf/Qr8k=
+          secure: a9uTfknSgEtpdR/SbdkWef9IdpqDN2rcWCzfcR5i2ZRWlzfA9OMmLKndUR2pLagIVgyDtjVyB/2XwOxq0BX8f2H5u8bLt0BhEz8wf+fFnJ5M9Lv0feV+n8FZNfAKOUhxeBcJ6R+PF/gQCUAqxAT6lG429+khvsMVDu67vsjcXsiNW4jD8M6c1iwzL4jd0qHcsnUHZZRf45/VlGWOOw2E6ztCP6OeURLPa/IkYnVLsq+YIgORGMpJJeyO18KggnMHq2YrinpzjguRGDsA1Y3R6WFNDoMi5DT1wHKFMUeTNuDsyyY5e6dpJx9yiLtcCAxKr8ExWerxqzYLWkKfmqUpbGcN7Sx0+m4Zcf5YnCx/7rMWGcw0dpP3FOCNC+4Pt4L3WZFnyxma1i6n6tUP7OzDbQHrfPfv9BZQKyQV/usF1ZJiF/EQnMIwv+C/s21F0De+Va3tHY8sbixwDuheG/cb3v3BGT0v6Z/hu95EG9QG+pBgubSQiXOBYSMceHxEuZUWE5AQJTWV/fFXLhzVeRgkMOHCMUBg7Jkg61drtZsnP6CosxgwM+4WxY+OEXALvZ4EPd+NYE9O6QPDzIoplSiw0BWKaOaNEojGuprOn49Q3K+MRnG/H7NiKJpIPEvMwi/0GfsGc5aQcjwx8TieJ4T1muRr60HzxHN3T01Xst+534Y=
 
       overwrite: true
       file_glob: true
