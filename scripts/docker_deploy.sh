@@ -2,7 +2,7 @@
 
 set -e
 
-image="ethereum/solc"
+image="dexonfoundation/dsolc"
 
 tag_and_push()
 {
