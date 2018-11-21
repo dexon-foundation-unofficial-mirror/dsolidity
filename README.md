@@ -1,5 +1,6 @@
 # The Solidity Contract-Oriented Programming Language
-[![Join the chat at https://gitter.im/ethereum/solidity](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/solidity?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/ethereum/solidity.svg?branch=develop)](https://travis-ci.org/ethereum/solidity)
+<!--[![Join the chat at https://gitter.im/dexon-foundation/dsolidity](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dexon-foundation/dsolidity?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)-->
+[![Build Status](https://travis-ci.com/dexon-foundation/dsolidity.svg?branch=develop)](https://travis-ci.com/dexon-foundation/dsolidity)
 Solidity is a statically typed, contract-oriented, high-level language for implementing smart contracts on the Ethereum platform.
 
 ## Table of Contents
@@ -40,7 +41,7 @@ contract HelloWorld {
 }
 ```
 
-To get started with Solidity, you can use [Remix](https://remix.ethereum.org/), which is an
+To get started with Solidity, you can use [Remix](https://remix.dexon.org/), which is an
 browser-based IDE. Here are some example contracts:
 
 1. [Voting](https://solidity.readthedocs.io/en/v0.4.24/solidity-by-example.html#voting)
