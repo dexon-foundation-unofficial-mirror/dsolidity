@@ -3,8 +3,8 @@
 #------------------------------------------------------------------------------
 # Script used for cross-platform comparison as part of the travis automation.
 # Splits all test source code into multiple files, generates bytecode and
-# uploads the bytecode into github.com/ethereum/solidity-test-bytecode where
-# another travis job is triggered to do the actual comparison.
+# uploads the bytecode into github.com/dexon-foundation/solidity-test-bytecode
+# where another travis job is triggered to do the actual comparison.
 #
 # ------------------------------------------------------------------------------
 # This file is part of solidity.
@@ -92,15 +92,15 @@ EOF
 
     if [ "$TRAVIS_SECURE_ENV_VARS" = "true" ]
     then
-        openssl aes-256-cbc -K $encrypted_60701c962b9c_key -iv $encrypted_60701c962b9c_iv -in "$REPO_ROOT"/scripts/bytecodecompare/deploy_key.enc -out deploy_key -d
+        openssl aes-256-cbc -K $encrypted_671c80db_key -iv $encrypted_671c80db_iv -in "$REPO_ROOT"/scripts/bytecodecompare/deploy_key.enc -out deploy_key -d
         chmod 600 deploy_key
         eval `ssh-agent -s`
         ssh-add deploy_key
 
-        git clone --depth 2 git@github.com:ethereum/solidity-test-bytecode.git
+        git clone --depth 2 git@github.com:dexon-foundation/solidity-test-bytecode.git
         cd solidity-test-bytecode
-        git config user.name "travis"
-        git config user.email "chris@ethereum.org"
+        git config user.name "Travis CI"
+        git config user.email "dev@dexon.org"
         git clean -f -d -x
 
         DIRNAME=$(cd "$REPO_ROOT" && git show -s --format="%cd-%H" --date=short)

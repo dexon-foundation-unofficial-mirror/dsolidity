@@ -28,7 +28,7 @@
 # (c) 2016 solidity contributors.
 #------------------------------------------------------------------------------
 
-set -e
+set -x
 
 VER=$(cat CMakeLists.txt | grep 'set(PROJECT_VERSION' | sed -e 's/.*set(PROJECT_VERSION "\(.*\)".*/\1/')
 test -n "$VER"
@@ -50,8 +50,8 @@ ssh-add deploy_key
 
 git clone --depth 2 git@github.com:dexon-foundation/dsolc-bin.git
 cd dsolc-bin
-git config user.name "Jimmy Hu"
-git config user.email "jimmy.hu@dexon.org"
+git config user.name "Travis CI"
+git config user.email "dev@dexon.org"
 git checkout -B gh-pages origin/gh-pages
 git clean -f -d -x
 
