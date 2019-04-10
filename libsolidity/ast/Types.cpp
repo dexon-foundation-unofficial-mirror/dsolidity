@@ -938,7 +938,6 @@ tuple<bool, rational> RationalNumberType::isValidLiteral(Literal const& _literal
 	{
 		case Literal::SubDenomination::None:
 		case Literal::SubDenomination::Wei:
-		case Literal::SubDenomination::Second:
 			break;
 		case Literal::SubDenomination::Szabo:
 			value *= bigint("1000000000000");
@@ -949,20 +948,23 @@ tuple<bool, rational> RationalNumberType::isValidLiteral(Literal const& _literal
 		case Literal::SubDenomination::Ether:
 			value *= bigint("1000000000000000000");
 			break;
+		case Literal::SubDenomination::Second:
+			value *= bigint("1000");
+			break;
 		case Literal::SubDenomination::Minute:
-			value *= bigint("60");
+			value *= bigint("60000");
 			break;
 		case Literal::SubDenomination::Hour:
-			value *= bigint("3600");
+			value *= bigint("3600000");
 			break;
 		case Literal::SubDenomination::Day:
-			value *= bigint("86400");
+			value *= bigint("86400000");
 			break;
 		case Literal::SubDenomination::Week:
-			value *= bigint("604800");
+			value *= bigint("604800000");
 			break;
 		case Literal::SubDenomination::Year:
-			value *= bigint("31536000");
+			value *= bigint("31536000000");
 			break;
 	}
 
